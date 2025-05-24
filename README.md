@@ -8,7 +8,7 @@ Une application Flutter simple et élégante permettant de rechercher des livres
 
 ### Page d'accueil (Recherche de livres)
 
-<img src="home_page.png" alt="Page d'accueil" width="300"/>
+<img src="page_home.png" alt="Page d'accueil" width="300"/>
 
 ### Page des favoris
 
