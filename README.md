@@ -2,19 +2,19 @@
 
 Une application Flutter simple et élégante permettant de rechercher des livres via l'API Google Books et de sauvegarder ses livres favoris localement avec SQLite.
 
----
+
 
 ## Aperçus de l'application
 
 ### Page d'accueil (Recherche de livres)
 
-<img src="assets/screenshots/home_page.png" alt="Page d'accueil" width="300"/>
+<img src="home_page.png" alt="Page d'accueil" width="300"/>
 
 ### Page des favoris
 
-<img src="assets/screenshots/home_favoris.png" alt="Page d'accueil" width="300"/>
+<img src="home_favoris.png" alt="Page d'accueil" width="300"/>
 
----
+
 
 ## Fonctionnalités
 
@@ -24,7 +24,7 @@ Une application Flutter simple et élégante permettant de rechercher des livres
 * Suppression de livres favoris
 * Interface moderne avec AppBar personnalisé
 
----
+
 
 ## Structure du projet
 
@@ -37,7 +37,7 @@ lib/
 └── main.dart          # Point d'entrée de l'application
 ```
 
----
+
 
 ## Fonctionnement
 
@@ -58,7 +58,7 @@ lib/
 * Liste stylisée avec options de suppression
 * Bouton retour dans un header arrondi
 
----
+
 
 ## Packages utilisés
 
