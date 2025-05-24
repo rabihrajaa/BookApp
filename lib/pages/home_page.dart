@@ -25,46 +25,85 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Recherche de livres'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.favorite),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => FavoritesPage()),
-            ),
-          )
-        ],
-      ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: controller,
-                    decoration: InputDecoration(labelText: 'Mot-clé'),
-                    onChanged: (val) => query = val,
-                  ),
-                ),
-                IconButton(
-                  icon: Icon(Icons.search),
-                  onPressed: searchBooks,
-                )
-              ],
-            ),
+   return Scaffold(
+  backgroundColor: Colors.grey[100],
+  body: Column(
+    children: [
+      Container(
+        decoration: BoxDecoration(
+          color: Colors.blue[700],
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(25),
+            bottomRight: Radius.circular(25),
           ),
-          Expanded(
-            child: ListView(
-              children: books.map((book) => BookCard(book: book)).toList(),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blue.withOpacity(0.2),
+              blurRadius: 10,
+              offset: Offset(0, 4),
             ),
-          )
-        ],
+          ],
+        ),
+        padding: const EdgeInsets.only(top: 60, left: 16, right: 16, bottom: 20),
+        margin: const EdgeInsets.only(bottom: 40),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              '📚 Recherche de livres',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IconButton(
+              icon: const Icon(Icons.favorite, color: Colors.white),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => FavoritesPage()),
+              ),
+            ),
+          ],
+        ),
       ),
-    );
+
+      //Zone de recherche et résultats
+      Expanded(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: controller,
+                      decoration: InputDecoration(
+                        labelText: 'Mot-clé',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                      ),
+                      onChanged: (val) => query = val,
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.search),
+                    onPressed: searchBooks,
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: books.map((book) => BookCard(book: book)).toList(),
+              ),
+            )
+          ],
+        ),
+      ),
+    ],
+  ),
+);
+
   }
 }
