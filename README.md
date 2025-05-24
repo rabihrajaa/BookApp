@@ -12,7 +12,7 @@ Une application Flutter simple et élégante permettant de rechercher des livres
 
 ### Page des favoris
 
-<img src="home_favoris.png" alt="Page d'accueil" width="300"/>
+<img src="page_favoris.png" alt="Page d'accueil" width="300"/>
 
 
 
