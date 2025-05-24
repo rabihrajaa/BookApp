@@ -1,6 +1,6 @@
 # Book App Flutter
 
-Une application Flutter simple et élégante permettant de rechercher des livres via l'API Google Books et de sauvegarder ses livres favoris localement avec SQLite.
+Une application Flutter simple et élégante permettant de rechercher des livres via l'API Google Books [📘 Documentation officielle Google Books API (FR)](https://developers.google.com/books/docs/v1/using?hl=fr) et de sauvegarder ses livres favoris localement avec SQLite.
 
 
 
